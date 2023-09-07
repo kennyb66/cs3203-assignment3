@@ -50,7 +50,16 @@ public class assignment3exe {
 			mulArr[j] = 1;
 		}
 		System.out.println("Result of multiplication: " + mul(mulArr));
-
+		
+		System.out.println("Please input number of elements you need for reversed array: ");
+		int reverseSize = keyboard.nextInt();
+		int[] reverse = new int[reverseSize];
+		System.out.println("Please input the values of the array you would like to reverse: ");
+		for(int i = 0; i < reverse.length; i++) {
+			reverse[i] = keyboard.nextInt();
+		}
+		reverse(reverse, reverseSize);
+		
 		keyboard.close();
 	}
 }
