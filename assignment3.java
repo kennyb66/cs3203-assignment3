@@ -16,6 +16,18 @@ public class assignment3exe {
 		}
 		return mul;
 	}
+	public static void reverse(int[] arr, int size) {
+		int[] b = new int[size];
+		int j = size;
+		for(int i = 0; i < size; i++) {
+			b[j - 1] = arr[i];
+			j = j - 1;
+		}
+		System.out.println("Reversed array is: \n");
+        for (int k = 0; k < size; k++) {
+            System.out.println(b[k]);
+        }
+	}
 
 	public static void main(String[] args) {
 		int[] sumArr = new int[100];
@@ -38,7 +50,19 @@ public class assignment3exe {
 			mulArr[j] = 1;
 		}
 		System.out.println("Result of multiplication: " + mul(mulArr));
-
+		
+		System.out.println("Please input number of elements you need for reversed array: ");
+		int reverseSize = keyboard.nextInt();
+		int[] reverse = new int[reverseSize];
+		System.out.println("Please input the values of the array you would like to reverse: ");
+		for(int i = 0; i < reverse.length; i++) {
+			reverse[i] = keyboard.nextInt();
+		}
+		reverse(reverse, reverseSize);
+		
 		keyboard.close();
 	}
 }
+
+
+
