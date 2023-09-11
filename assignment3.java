@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class assignment3exe {
-	public static int sum(int[] sumArr) {
+	public static int sum(int[] sumArr) { // method that sums an array of ints 
 		int sum = 0;
 		for (int i = 0; i < sumArr.length; i++) {
 			sum += sumArr[i];
@@ -40,13 +40,14 @@ public class assignment3exe {
 			sumArr[i] = keyboard.nextInt();
 		}
 		System.out.println("Result of addition: " + sum(sumArr));
+		
 		System.out.println("Please input number of elements you need for multiplication calculation:");
 		int mulSize = keyboard.nextInt();
 		System.out.println("Please input your numbers to be computed for multiplication:");
 		for (int i = 0; i < mulSize; i++) {
 			mulArr[i] = keyboard.nextInt();
 		}
-		for (int j = mulSize; j < mulArr.length; j++) {
+		for(int j = mulSize; j < mulArr.length; j++) {
 			mulArr[j] = 1;
 		}
 		System.out.println("Result of multiplication: " + mul(mulArr));
@@ -59,7 +60,6 @@ public class assignment3exe {
 			reverse[i] = keyboard.nextInt();
 		}
 		reverse(reverse, reverseSize);
-		
 		keyboard.close();
 	}
 }
